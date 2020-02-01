@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Here you can fill in the form to applicate for three Bachelor programs in graphic 
+                                    design, web development and interaction design, and a 2-year master's degree 
+                                    in interaction design, as well as a one year program in web design.">
+  <!--Font Awesome kit code-->
+  <script src="https://kit.fontawesome.com/2107a45d49.js" crossorigin="anonymous"></script>
+  <!--! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css -->
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/applicate.css">
+  <title>Applicate | NTNU Design Gjøvik</title>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <header class="main-grid">
+    <div class="header-content">
+      <a class="logo-link" href="index.html">
+        <img src="assets/images/ntnu-logo-white.svg" alt="Logo of NTNU">
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="applicate.html">Applicate</a></li>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+    </div>
+  </header>
+  <!-- / END Navigation bar -->
+
+  <div class="main-grid">
+    <main>
+      <h1>Applicate at NTNU</h1>
+      <p>Fill in the form below to applicate for a programme at NTNU Design Gjøvik.</p>
+      <div class="applicate-content">
+        <!-- I havent specified the action "link" since we dont have a name for the backend file yet -->
+        <form action="#" method="POST">
+
+          <!-- First and last name input -->
+          <fieldset>
+            <legend>Your first and last name</legend>
+            <label for="fname">First name</label>
+            <input id="fname" type="text" name="first_name" required>
+
+            <label for="lname">Last name</label>
+            <input id="lname" type="text" name="last_name" required>
+          </fieldset>
+
+          <!-- Contact information input -->
+          <fieldset>
+            <legend>Contact information</legend>
+            <label for=email>E-mail</label>
+            <input id="email" type="email" name="email" required>
+
+            <label for=mobile>Mobile phone</label>
+            <input id="mobile" type="tel" name="mobile_phone" required>
+          </fieldset>
+
+          <!-- Academic information input -->
+          <label for="background">Academic background</label>
+          <input class="no-margin" id="background" type="text" name="academic_background" required>
+          <p class="input-helper">e.g.: High School, Gjøvik College...</p>
+
+          <!-- Select your programme input -->
+          <label for="programme">Select programme</label>
+          <select id="programme" name="select_programme">
+            <option value="Select programme">Select programme...</option>
+            <option value="BWU">BWU</option>
+            <option value="BIXD">BIXD</option>
+            <option value="BMED">BMED</option>
+            <option value="ARWEB">ARWEB</option>
+            <option value="MIXD">MIXD</option>
+          </select>
+
+          <!-- Other comment, optional -->
+          <label for="comment">Other comments <span class="form-optional">(optional)</span></label>
+          <textarea id="comment" name="comments"></textarea>
+
+          <!-- Submit form button -->
+          <button type="submit">Send application</button>
+        </form>
+
+        <!-- Group box information -->
+        <div class="box">
+          <h2>Our Group</h2>
+          <p>The group in Gjøvik has responsibility for three Bachelor programs in graphic design, web development and interaction design, and a 2-year master's degree in interaction design, as well as a one year program in web design.</p>
+        </div>
+        <!-- / END Group box information -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer  -->
+  <footer class="main-grid">
+    <div class="footer-content">
+      <img src="assets/images/main-logo-slogan-white.png" alt="Logo with slogan for NTNU">
+      <div class="footer-links">
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="applicate.html">Applicate</a></li>
+          <li><a href="programmes.html">Programmes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="footer-social">
+          <li><a aria-label="NTNU Facebook page" id="facebook" href="https://www.facebook.com/ntnu.no" target="_blank" title="Official Facebook page of NTNU"><span class="fab fa-facebook-f"></span></a></li>
+          <li><a aria-label="NTNU Twitter page" id="twitter" href="https://www.twitter.com/NTNU" target="_blank" title="Official Twitter page of NTNU"><span class="fab fa-twitter"></span></a></li>
+          <li><a aria-label="NTNU Instagram page" id="instagram" href="https://www.instagram.com/ntnu" target="_blank" title="Official Instagram page of NTNU"><span class="fab fa-instagram"></span></a></li>
+          <li><a aria-label="NTNU Youtube page" id="youtube" href="https://www.youtube.com/user/ntnuinfo" target="_blank" title="Official Youtube page of NTNU"><span class="fab fa-youtube"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- / END Footer  -->
+
+  <!-- Navigation script -->
+  <script src="assets/scripts/navigation.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,229 @@
+/*=====================================================================
+  APPLICATE.HTML CSS
+  =====================================================================*/
+
+
+h2 {
+  margin: 0 0 .5em 0;
+  font-size: 1.2em;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 3em;
+  bottom: 0;
+  left: 0;
+  background: rgb(194, 194, 194);
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+
+/*
+  FORMS
+*/
+
+input,
+textarea,
+select {
+  padding: 1em;
+  border: 1px solid #5C5C5C;
+  margin-bottom: 1em;
+}
+
+input,
+textarea,
+select,
+button {
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+form {
+  display: -ms-grid;
+  display: grid;
+  background: var(--clr-accent);
+  padding: 2em;
+  margin: 0;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .25);
+     -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, .25);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, .25);
+  border-top: 5px solid var(--clr-main);
+}
+
+fieldset > * {
+  display: block;
+  width: 100%;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+legend,
+.input-helper {
+  color: #5C5C5C;
+}
+
+label {
+  font-weight: 700;
+}
+
+textarea {
+  height: 10em;
+}
+
+.input-helper {
+  margin: 0 0 1em 0;
+  font-style: italic;
+  font-size: .9em;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+button {
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: var(--clr-main);
+  padding: 1em 1.8em;
+  letter-spacing: 1px;
+  -webkit-transition: background 200ms ease-out;
+  -o-transition: background 200ms ease-out;
+  -moz-transition: background 200ms ease-out;
+  transition: background 200ms ease-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--clr-main-dark);
+}
+
+[type="tel"],
+select {
+  max-width: 13em;
+}
+
+
+/*
+  FORM SIDEBOX
+*/
+
+.box {
+  background: #fff;
+  color: #000;
+  padding: 2em;
+  margin: 2em 0 0 0;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  font-size: .9em;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, .25);
+     -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, .25);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, .25);
+}
+
+.box p {
+  margin: 0;
+}
+
+.applicate-content {
+  margin: 2em 0;
+}
+
+
+/*
+  MEDIA QUERIES
+*/
+
+@media screen and (min-width: 700px) {
+  button {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+
+  .wrapper,
+  .applicate-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .wrapper {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .box {
+    margin: 0 0 0 1em;
+    max-width: 400px;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -webkit-calc(60px + 1em);
+    top: -moz-calc(60px + 1em);
+    top: calc(60px + 1em);
+  }
+
+  .box::before,
+  .box::after {
+    content: '';
+    position: absolute;
+    background: var(--clr-main);
+  }
+
+  .box::before {
+    top: 3px;
+    left: -21px;
+    width: 5px;
+    height: -webkit-calc(100% + 1em);
+    height: -moz-calc(100% + 1em);
+    height: calc(100% + 1em);
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+  }
+
+  .box::after {
+    bottom: -webkit-calc(-1em - 4px);
+    bottom: -moz-calc(-1em - 4px);
+    bottom: calc(-1em - 4px);
+    left: -21px;
+    width: -webkit-calc(100% + 1.4em);
+    width: -moz-calc(100% + 1.4em);
+    width: calc(100% + 1.4em);
+    height: 5px;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+  }
+
+  form {
+    max-width: 600px;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+       -moz-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
